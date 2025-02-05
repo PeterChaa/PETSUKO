@@ -13,7 +13,7 @@
     "Katie", "Oliver", "Mia", "Opal", "Cooper", "Rex", "Roxie", "Elvis", "Edward", "Matt", "Kathy", "Heidi",
     "Cha", "Hazel", "Skye", "Pearl", "Oreo", "Hani", "Juno", "Jane", "Many", "Churro", "Thor", "Nugget",
     "Kiwi", "Thunder", "Nemo", "Rocket", "Tommy", "Tom", "Bear", "Cotton", "Pixel", "Richard", "Tristan",
-    "Vincent", "Trevor", "Dracula", "Blood", "Boy", "Kratos The God of War", "Bloof", "Blarf", "Atlas",
+    "Vincent", "Trevor", "Dracula", "Blood", "Boy", "Krastos The God of War", "Bloof", "Blarf", "Atlas",
     "Glorg", "Klock", "Platica", "Lalo", "Saul", "Kim", "Heisenberg", "Tony", "Stark",
     "Crystal Williams", "Plink", "Kirby", "Kazuya", "Mishima", "Falcon", "Todo", "The Honored One", "Akira",
     "Hakari", "Jesse", "Jess", "Jessica", "Ali", "Aki", "AJ", "Alex", "Yoobeans", "Aoi", "Chika", "Hanzō",
@@ -27,7 +27,7 @@
     "Captain Sparklez", "Tarnished", "Forsaken", "Cayde-6", "Guardian", "Coach", "Nick", "Rochelle", "Ellis",
     "Bubblegum", "Peanut the Great", "Rust", "Counter Strike", "Smokey", "Shadow", "Fred", "Pumpkin", "Sunny",
     "Marshmallow", "Socks", "Bolt", "Breezy", "Misty", "Patches", "Ginger", "Cocoa", "Chubby", "Speckles",
-    "Mocha", "Macha", "Latte", "Vanilla", "Leatherface", "Liquid Death",
+    "Mocha", "Macha", "Latte", "Vanilla", "Leatherface", "Liquid Death", "Yeonjae",
   ];
 
   let userTyped = false;
