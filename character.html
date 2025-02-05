@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+    </style>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="character.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap"
+      rel="stylesheet"
+    />
+    <link id="favicon" rel="icon" type="image/png" sizes="48x48" href="resources/f1.png">
+    <script>
+        const frames = [
+            "resources/f1.png",
+            "resources/f2.png",
+            "resources/f3.png",
+            "resources/f4.png"
+        ];
+        let currentFrame = 0;
+
+        function animateFavicon() {
+            const favicon = document.getElementById("favicon");
+            favicon.href = frames[currentFrame];
+            currentFrame = (currentFrame + 1) % frames.length;
+        }
+
+        setInterval(animateFavicon, 500); // Change frame every 200ms
+    </script>
+    <title>petsugo!</title>
+  </head>
+  <body>
+   
+
+   
+    <script id="generator"  src="character.js" defer></script>
+  
+
+<img id="window" src="resources/IMG_8197.png">
+<img id="frame" src="resources/frame!.png">
+<img id="heart" src ="resources/heart.gif">
+<img id="hearts" src="wheelgame/hearts!.gif">
+
+
+<img id="frame2" src ="resources\frame2.png">
+
+<div id="statusContainerWrapper">
+    <div id="heartbar"><img src ="resources/heartbar.png"></div>
+    <div id="statusContainer">
+      <div id="statusBar"></div>
+    </div>
+  </div>
+
+<h2 id="displayPetName"></h2>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let petName = sessionStorage.getItem("petName");
+    let userTyped = sessionStorage.getItem("userTyped");
+
+    console.log("Loaded pet name:", petName);
+    console.log("User typed:", userTyped);
+
+    if (petName && petName.trim() !== "") {
+      document.getElementById("displayPetName").textContent = petName;
+    } else {
+      document.getElementById("displayPetName").textContent = "Your Pet";
+    }
+  });
+</script>
+
+</div>
+
+
+<div id="welcome">
+    ~welcome to petsugo~ <br>
+    Your pet is hungry! <br>
+    play games to earn food to feed it.
+</div>
+
+<button id="play">play</button>
+<button id="feed">Feed x0</button>
+
+<div id="statusBar">
+        <script src="statusbar.js" defer></script>
+      </div>
+
+
+
+
+<canvas id="skillCheckCanvas" style="display: none;"></canvas>
+<canvas id="board" style="display: none;"></canvas>
+<canvas id="dumplingBoard" style="display:none;"></canvas>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Preload both game scripts at the start
+        let skillScriptLoaded = false;
+        let fishScriptLoaded = false;
+        let dumplingScriptLoaded = false;  // Track dumpling.js loading
+  
+        let skillCanvas = document.getElementById("skillCheckCanvas");
+        let fishCanvas = document.getElementById("board");
+        let dumplingCanvas = document.getElementById("dumplingBoard");  // Assuming you have a canvas for dumpling.js
+  
+        // Create script elements to load later
+        let skillScript = document.createElement("script");
+        let fishScript = document.createElement("script");
+        let dumplingScript = document.createElement("script");  // New script element for dumpling.js
+  
+        skillScript.id = "skillCheckScript";
+        fishScript.id = "fishGameScript";
+        dumplingScript.id = "dumplingGameScript";  // Set ID for dumpling.js script
+  
+        skillScript.src = "skillcheck.js";
+        fishScript.src = "fish.js";
+        dumplingScript.src = "dumpling.js";  // Path to dumpling.js
+  
+        // Listen for the skill check script loading
+        skillScript.onload = function () {
+            console.log("Skill Check Game loaded!");
+            skillScriptLoaded = true;
+        };
+  
+        // Listen for the fish game script loading
+        fishScript.onload = function () {
+            console.log("Fish Game loaded!");
+            fishScriptLoaded = true;
+        };
+  
+        // Listen for the dumpling script loading
+        dumplingScript.onload = function () {
+            console.log("Dumpling Game loaded!");
+            dumplingScriptLoaded = true;
+        };
+  
+        // Append the scripts to the body
+        document.body.appendChild(skillScript);
+        document.body.appendChild(fishScript);
+        document.body.appendChild(dumplingScript);  // Append the dumpling.js script
+  
+        // Function to reset and start a game
+        function startGame(selectedGame) {
+            // Hide all canvases before switching
+            skillCanvas.style.display = "none";
+            fishCanvas.style.display = "none";
+            dumplingCanvas.style.display = "none";  // Hide dumpling canvas
+  
+            // Remove the script elements of the previous game
+            if (document.getElementById("skillCheckScript")) {
+                document.getElementById("skillCheckScript").remove();
+            }
+            if (document.getElementById("fishGameScript")) {
+                document.getElementById("fishGameScript").remove();
+            }
+            if (document.getElementById("dumplingGameScript")) {  // Remove dumpling script
+                document.getElementById("dumplingGameScript").remove();
+            }
+  
+            // Only load and start the selected game if its script is already loaded
+            if (selectedGame === "skillcheck.js" && skillScriptLoaded) {
+                skillCanvas.style.display = "block";
+                if (typeof startSkillGame === "function") {
+                    startSkillGame();
+                } else {
+                    console.error("startSkillGame function not found!");
+                }
+            } else if (selectedGame === "fish.js" && fishScriptLoaded) {
+                fishCanvas.style.display = "block";
+                if (typeof startFishGame === "function") {
+                    startFishGame();
+                } else {
+                    console.error("startFishGame function not found!");
+                }
+            } else if (selectedGame === "dumpling.js" && dumplingScriptLoaded) {  // Add condition for dumpling.js
+                dumplingCanvas.style.display = "block";
+                if (typeof startDumplingGame === "function") {  // Ensure you have a startDumplingGame function in dumpling.js
+                    startDumplingGame();
+                } else {
+                    console.error("startDumplingGame function not found!");
+                }
+            } else {
+                console.error("Game script not loaded yet.");
+            }
+        }
+  
+        // Add event listener to the play button
+        document.getElementById("play").addEventListener("click", function () {
+            let games = ["skillcheck.js", "fish.js", "dumpling.js"];  // Include dumpling.js in the array
+            let selectedGame = games[Math.floor(Math.random() * games.length)];
+            console.log("Selected game:", selectedGame);
+            
+            startGame(selectedGame);
+        });
+    });
+  </script>
+  
+
+
+
+
+
+  </body>
+    
+</html>
+
+
+
+
+
