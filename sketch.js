@@ -9,7 +9,7 @@ const petNames = [
   "Kay", "Kai", "DJ", "PJ", "Berry", "Shoko", "Squirt", "Chud", "Goobert", "Chopper", "Monkey", 
   "Luffy", "Kurt", "Cobain", "Janet", "Jennie", "Jared", "Jack", "Reid", "Gustav", "Robert", 
   "Anthony", "Alvin", "Jake", "James", "Patrick", "Zed", "Zach", "Pikacku", "Sam", "Kathrine", "Madyline",
-  "Katie", "Oliver", "Mia", "Cooper", "Rex", "Roxie", "Elvis", "Edward", "Matt", "Kathy", "Heidi",
+  "Katie", "Oliver", "Mia", "Opal", "Cooper", "Rex", "Roxie", "Elvis", "Edward", "Matt", "Kathy", "Heidi",
   "Cha", "Hazel", "Skye", "Pearl", "Oreo", "Hani", "Juno", "Jane", "Many", "Churro", "Thor", "Nugget",
   "Kiwi", "Thunder", "Nemo", "Rocket", "Tommy", "Tom", "Bear", "Cotton", "Pixel", "Richard", "Tristan",
   "Vincent", "Trevor", "Dracula", "Blood", "Boy", "Kratos The God of War", "Bloof", "Blarf", "Atlas",
