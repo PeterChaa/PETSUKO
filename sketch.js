@@ -27,7 +27,7 @@
     "Captain Sparklez", "Tarnished", "Forsaken", "Cayde-6", "Guardian", "Coach", "Nick", "Rochelle", "Ellis",
     "Bubblegum", "Peanut the Great", "Rust", "Counter Strike", "Smokey", "Shadow", "Fred", "Pumpkin", "Sunny",
     "Marshmallow", "Socks", "Bolt", "Breezy", "Misty", "Patches", "Ginger", "Cocoa", "Chubby", "Speckles",
-    "Mocha", "Macha", "Latte", "Vanilla", "Leatherface", "Liquid Death", "Yeonjae",
+    "Mocha", "Macha", "Latte", "Vanilla", "Leatherface", "Liquid Death", "Yeonjae", "liding", 
   ];
 
   let userTyped = false;
