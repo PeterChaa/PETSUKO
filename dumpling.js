@@ -193,7 +193,7 @@
             y: y,
             width: fireWidth,
             height: fireHeight,
-            speed: 3,
+            speed: 6,
             frameX: 0,
             frameY: 0,
             animateFire: function() {
