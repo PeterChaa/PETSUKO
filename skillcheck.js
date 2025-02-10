@@ -21,7 +21,7 @@ function startSkillGame() { // Ensure this matches the expected function name
     const radius = 200;
 
     let angle = 0;
-    let speed = 0.02;
+    let speed = 0.07;
     let gameOver = false;
     let successCount = 0;
     let steakFrame = 0;
@@ -139,7 +139,7 @@ function startSkillGame() { // Ensure this matches the expected function name
             successCount++;
             let cookedSound = new Audio("wheelgame/cooked.mp3");
             cookedSound.play();
-            speed = Math.min(0.4, speed + 0.05);
+            speed = Math.min(0.8, speed + 0.15);
             randomizeSuccessZone();
         }
 

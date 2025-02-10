@@ -35,7 +35,7 @@
     // Fire Animation Properties
     let fireSpriteWidth = 480;
     let fireSpriteHeight = 480;
-    let fireFrameSpeed = 100; // Speed of the fire frame change
+    let fireFrameSpeed = 50; // Speed of the fire frame change
     let fireGameFrame = 0;
 
     // Fire Spawning Function with Random Interval
@@ -241,7 +241,7 @@
     let spriteHeight = 480;
     let frameX = 2;
     let gameFrame = 0;
-    let staggerFrame = 100;
+    let staggerFrame = 10;
 
     function animate() {
         context.clearRect(0, 0, canvasWidth, canvasHeight);
@@ -312,6 +312,7 @@
             );
         }
 
+        
         if (!spawnEnabled && frameX < 11) {
             if (gameFrame % staggerFrame === 0) {
                 frameX++;

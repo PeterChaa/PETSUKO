@@ -270,8 +270,8 @@
       return;
     }
 
-    let randomVelocityLeft = Math.random() * (-4 - (-1)) + (-4);
-    let randomVelocityRight = Math.random() * (4 - 1) + 1;
+    let randomVelocityLeft = Math.random() * (-6 - (-2)) + (-6);
+    let randomVelocityRight = Math.random() * (6 - 2) + 2;
 
     setTimeout(() => {
       let sharkLeft = {
