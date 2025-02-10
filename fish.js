@@ -34,8 +34,8 @@
   let fishXX = boardWidth + 5;
   let fishleftImg, fishrightImg;
 
-  let velocityX = +2;
-  let velocityXX = -2;
+  let velocityX = +4;
+  let velocityXX = -4;
 
   let sharkArray = [];
   let sharkWidth = 250;
