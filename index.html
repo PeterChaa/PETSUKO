@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>petsugo!</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap"
+      rel="stylesheet"
+    />
+    <link id="favicon" rel="icon" type="image/png" sizes="48x48" href="resources/f1.png">
+    <script>
+        const frames = [
+            "resources/f1.png",
+            "resources/f2.png",
+            "resources/f3.png",
+            "resources/f4.png"
+        ];
+        let currentFrame = 0;
+
+        function animateFavicon() {
+            const favicon = document.getElementById("favicon");
+            favicon.href = frames[currentFrame];
+            currentFrame = (currentFrame + 1) % frames.length;
+        }
+
+        setInterval(animateFavicon, 500); // Change frame every 200ms
+    </script>
+  </head>
+  <body>
+    <script src="/sketch.js" defer></script>
+    <h1>
+      <div class="loader">
+        <span style="--i:1;">P</span><span style="--i:2;">e</span><span style="--i:3;">t</span><span style="--i:4;">u</span><span style="--i:5;">s</span><span style="--i:6;">g</span><span style="--i:7;">o</span><span style="--i:8;">!</span>
+      </div>
+    </h1>
+    <form>
+      <div class="form-row">
+        <img src="resources/New Piskel (1).gif" style="width:15%">
+        <input type="text" id="petname" placeholder="Name your pet!" name="petname" />
+        <button id="button" type="button">Generate</button>
+        <img src="resources/New Piskel.gif" style="width:15%">
+      </div>
+      <div class="center">
+        <button class="button button2" type="button"><a href="character.html">Start</a></button>
+      </div>
+    </form>
+  </body>
+</html>
+</html>

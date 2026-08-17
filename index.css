@@ -1,0 +1,72 @@
+h1 {
+    text-align: center;
+    font-family: 'Jersey 10', sans-serif; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .form-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center; /* Center items inside */
+    margin: 0 auto; /* Center the row itself */
+    width: fit-content; /* Prevents it from taking full width */
+  }
+  
+  body {
+    background-color: #faf8f6;
+    font-family: 'Jersey 10', sans-serif; 
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="text"] {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: 'Jersey 10', sans-serif; 
+    padding: 6px 10px;
+  }
+
+  button {
+    padding: 8px 10px;
+    font-size: 18px;
+    font-family: 'Jersey 10', sans-serif; 
+    color: #1a5ad1;
+    background-color: #e9e6d9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .button2 {
+    margin-top: 0px;
+    font-size: 25px;
+    padding: 10px 25px;
+    background-color: #e9e6d9;
+    color: #1a5ad1;
+  }
+
+  button:hover {
+    transform: translateY(-3px);
+  }
+  
+  .loader {
+  
+    position: flex; 
+  }
+  .loader span {
+    position: flex;
+    font-size: 1em;
+    display: inline-block;
+    animation: animate 2s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+
+  }
+  @keyframes animate {
+    0%,40%,100% { transform: translateY(0); }
+    20% { transform: translateY(-30px); }
+}
