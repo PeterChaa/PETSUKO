@@ -29,7 +29,7 @@ const petNames = [
   "Cosmo", "Wando", "Butters", "Cartman", "Kyle", "Stan", "Em", "Tolkien", "Griffin", "Stewie", "Brian",
   "Lois", "Meg", "Megatron", "Joe", "Cleveland", "Quagmire", "Zuko", "Mark", "Azula", "Avatar",
   "Katara", "Miffy", "Smiski", "Ghost", "Soap", "Price", "Dice", "Ace", "Pocket", "Baddie", "Rainbow",
-  "Drop", "Cooler", "Flush", "Full House", "Raise", "Stand", "JoJo", "River", "Bluff", "Golden Requiem"<
+  "Drop", "Cooler", "Flush", "Full House", "Raise", "Stand", "JoJo", "River", "Bluff", "Golden Requiem",
   "Sage", "MF DOOM", "Sza", "Jett", "Omen", "Pheonix", "Breach", "Brimstone", "Psylocke", "Racoon",
   "Venom", "Frost", "Moonnight", "Daryl", "Rick", "Negan", "Glen", "Harvey", "Steve", "Creeper",
   "Captain Sparklez", "Hoover", "Taft", "JFK", "Theodore", "Kennedy", "Leon", "Ada", "Tarnished",
